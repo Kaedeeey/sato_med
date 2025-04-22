@@ -1,0 +1,848 @@
+@charset "UTF-8";
+/* * {
+  outline: 1px solid blue;
+} */
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth; /*滑らかにボタンを押して該当場所に飛ぶ*/
+}
+body {
+  background-color: #fffff6;
+  font-family: "ヒラギノ角ゴ ProN", ‘Hiragino Sans’, "游ゴシック", sans-serif;
+}
+.container {
+  width: 1000px; /*固定表示はwidth*/
+  margin: 0 auto; /*center表示:上下=0,左右=auto;*/
+}
+@media screen and (max-width: 680px) {
+  .container {
+    width: 100%;
+  }
+}
+.header {
+  display: flex; /*ヘッダーを横並び*/
+  justify-content: space-between;
+  text-align: center;
+  color: #666;
+}
+.logo {
+  width: 100px;
+  padding-left: 15px;
+  padding-right: 10px;
+  text-align: center; /*垂直中央揃え*/
+  justify-content: ccenter;
+}
+@media screen and (max-width: 680px) {
+  .logo {
+    width: 100%;
+  }
+}
+.nav1 {
+  display: flex; /*nav1を横並び*/
+  width: 730px;
+  justify-content: space-between;
+  font-size: 20px;
+}
+.nav1 li {
+  width: calc(100% / 6 - 5px);
+  display: block; /*ボタン全体*/
+  margin-top: 10px;
+  justify-content: space-between;
+  letter-spacing: 1px;
+}
+.nav1 li a {
+  color: #666;
+  cursor: pointer; /*ポインターはli{}内にかける*/
+  display: block;
+  text-decoration: none;
+}
+.nav1 li a::after {
+  content: url(../images/sannkaku.png); /*aタグの後ろに三角*/
+}
+.nav1 li a:hover {
+  color: #aaa;
+}
+.headerright {
+  width: 120px;
+  text-align: center; /*水平中央揃え*/
+  font-size: 10px;
+  margin-top: 10px; /**/
+}
+.sp img {
+  width: 55px;
+}
+.holiday::before {
+  padding-left: 2px;
+  margin-top: 10px;
+  content: url(../images/icon_teikyubi.png); /*アイコン*/
+}
+.tel::before {
+  padding-left: 2px;
+  content: url(../images/icon_tel.png);
+}
+@media screen and (max-width: 680px) {
+  .topPage img {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+}
+.about_relative {
+  position: relative; /*ここ基準*/
+  margin-top: 0;
+  width: 1000px;
+}
+@media screen and (max-width: 680px) {
+  .about_relative {
+    width: 100%;
+  }
+}
+/*aboutはここから↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+.about_relative img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 680px) {
+  .about_relative img {
+    width: 100%;
+  }
+}
+.title1 {
+  font-size: 8rem;
+  position: absolute;
+  top: px;
+  left: 98px;
+  color: #42210b;
+}
+@media screen and (max-width: 680px) {
+  .title1 {
+    font-size: 4rem;
+    position: absolute;
+    top: 50px;
+    left: 90px;
+    color: #42210b;
+  }
+}
+.catchf1-1 {
+  font-size: 4.3rem;
+  position: absolute;
+  top: 146px;
+  left: 98px;
+  color: #42210b;
+}
+@media screen and (min-width: 680px) {
+  .catchf1-1sp {
+    display: none;
+  }
+}
+@media screen and (max-width: 680px) {
+  .catchf1-1 {
+    display: none;
+  }
+}
+@media screen and (max-width: 680px) {
+  .catchf1-1sp {
+    font-size: 2.6rem;
+    position: absolute;
+    top: 160px;
+    text-align: center;
+    color: #42210b;
+  }
+}
+.intro1 {
+  font-size: 2.3rem;
+  position: absolute;
+  top: 215px;
+  left: 150px;
+  color: #42210b;
+  line-height: 2;
+}
+@media screen and (max-width: 680px) {
+  .intro1 {
+    display: none;
+  }
+}
+@media screen and (min-width: 680px) {
+  .intro1sp {
+    display: none;
+  }
+}
+@media screen and (max-width: 680px) {
+  .intro1sp {
+    font-size: 1.6rem;
+    position: absolute;
+    top: 255px;
+    left: 50px;
+    color: #42210b;
+    line-height: 2;
+  }
+}
+.button1 a {
+  /*詳しくみるの部分*/
+  font-size: 1.6rem;
+  position: absolute;
+  top: 415px;
+  left: 145px;
+  color: #666;
+  display: block;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 680px) {
+  .button1 a {
+    display: none;
+  }
+}
+.button1 a::after {
+  content: url(../images/yajirushi.png); /*矢印アイコン*/
+}
+.button1 a:hover {
+  color: #aaa;
+}
+.about1 {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 510px;
+  left: 195px;
+  line-height: 1.8;
+  color: #534731;
+}
+@media screen and (max-width: 680px) {
+  .about1 {
+    display: none;
+  }
+}
+.pointcolor {
+  color: #fbb03b;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+@media screen and (max-width: 680px) {
+  .pointclolor {
+    display: none;
+  }
+}
+.catchf1-2 {
+  font-size: 4.3rem;
+  position: absolute;
+  top: 1600px;
+  left: 98px;
+  color: #42210b;
+}
+@media screen and (max-width: 680px) {
+  .catchf1-2 {
+    display: none;
+  }
+}
+.about {
+  color: #534731;
+  line-height: 2.8rem;
+}
+.about2 {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 985px;
+  left: 307px;
+}
+@media screen and(max-width: 680px) {
+  .about2 {
+    font-size: 1.6rem;
+    position: absolute;
+    top: 1277px;
+    left: 200px;
+  }
+}
+.about3 {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 1067px;
+  left: 541px;
+}
+.about4 {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 1242px;
+  left: 307px;
+}
+.about5 {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 1315px;
+  left: 541px;
+}
+/*farmはここから↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+.farm_relative {
+  position: relative; /*ここ基準*/
+  margin-top: 0;
+}
+.farm_relative img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 680px) {
+  .farm_relative img {
+    width: 100%;
+  }
+}
+.title2 {
+  font-size: 8rem;
+  position: absolute;
+  top: 26px;
+  left: 98px;
+  color: #42210b;
+}
+@media screen and (max-width: 680px) {
+  .title2 {
+    font-size: 4rem;
+    position: absolute;
+    top: 196px;
+    left: 98px;
+    color: #42210b;
+  }
+}
+@media screen and (min-width: 680px) {
+  .catchf2-1 {
+    font-size: 4.3rem;
+    position: absolute;
+    top: 146px;
+    left: 98px;
+    color: #42210b;
+  }
+}
+@media screen and (max-width: 680px) {
+  .catchf2-1 {
+    display: none;
+  }
+}
+@media screen and (min-width: 680px) {
+  .catchf2-1sp {
+    display: none;
+  }
+}
+@media screen and (max-width: 680px) {
+  .catchf2-1sp {
+    font-size: 2.6rem;
+    position: absolute;
+    top: 285px;
+    text-align: center;
+    color: #42210b;
+  }
+}
+.intro2 {
+  font-size: 2.3rem;
+  position: absolute;
+  top: 215px;
+  left: 150px;
+  color: #42210b;
+  line-height: 2;
+}
+@media screen and (max-width: 680px) {
+  .intro2 {
+    display: none;
+  }
+}
+@media screen and (min-width: 680px) {
+  .intro2sp {
+    display: none;
+  }
+}
+@media screen and (max-width: 680px) {
+  .intro2sp {
+    font-size: 1.6rem;
+    position: absolute;
+    top: 387px;
+    left: 35px;
+    color: #42210b;
+    line-height: 2.8rem;
+  }
+}
+@media screen and (min-width: 680px) {
+  .nouka {
+    font-size: 1.7rem;
+    color: #42210b;
+    font-weight: bold;
+  }
+}
+@media screen and (max-width: 680px) {
+  .nouka {
+    display: none;
+  }
+}
+.nouka1 {
+  position: absolute;
+  top: 679px;
+  left: 111px;
+}
+.nouka2 {
+  position: absolute;
+  top: 679px;
+  left: 421px;
+}
+.nouka3 {
+  position: absolute;
+  top: 679px;
+  left: 720px;
+}
+@media screen and (min-width: 680px) {
+  .noukasp {
+    display: none;
+  }
+}
+@media screen and (max-width: 680px) {
+  .noukasp {
+    font-size: 1.7rem;
+    color: #111;
+    font-weight: bold;
+  }
+}
+.nouka1sp {
+  position: absolute;
+  top: 730px;
+  left: 275px;
+}
+.nouka3sp {
+  position: absolute;
+  top: 1025px;
+  left: 35px;
+}
+.catchf2-2 {
+  font-size: 4.3rem;
+  position: absolute;
+  top: 782px;
+  left: 98px;
+  color: #42210b;
+}
+@media screen and (max-width: 680px) {
+  .catchf2-2 {
+    font-size: 4.3rem;
+    position: absolute;
+    top: 1266px;
+    text-align: center;
+    color: #42210b;
+  }
+}
+.farm1 {
+  font-size: 2rem;
+  position: absolute;
+  top: 856px;
+  left: 150px;
+  color: #42210b;
+  line-height: 1.5;
+}
+@media screen and (max-width: 680px) {
+  .farm1 {
+    display: none;
+  }
+}
+@media screen and (min-width: 680px) {
+  .farm1sp {
+    display: none;
+  }
+}
+@media screen and (max-width: 680px) {
+  .farm1sp {
+    font-size: 1.6rem;
+    position: absolute;
+    top: 1335px;
+    left: 35px;
+    color: #42210b;
+    line-height: 2.8rem;
+  }
+}
+@media screen and (min-width: 680px) {
+  .kaisaisp {
+    display: none;
+  }
+}
+@media screen and (max-width: 680px) {
+  .kaisaisp {
+    font-size: 1.8rem;
+    position: absolute;
+    top: 1450px;
+    left: 98px;
+    text-align: center;
+    color: #42210b;
+    line-height: 2.8rem;
+  }
+}
+.button2 {
+  content: url(../images/button2.png);
+  position: absolute;
+  top: 950px;
+  left: 473px;
+}
+@media screen and (max-width: 680px) {
+  .button2 {
+    display: none;
+  }
+}
+.button2 :hover {
+  color: #aaa;
+}
+@media screen and (min-width: 680px) {
+  .button2sp {
+    display: none;
+  }
+}
+@media sccreen and (max-width: 680px) {
+  .button2sp {
+    border-radius: 30px;
+    background-color: #42210b;
+    padding: 1rem;
+    position: absolute;
+    top: 1885px;
+    left: 65px;
+  }
+}
+@media screen and (min-width: 680px) {
+  .button2sp_yoyaku {
+    display: none;
+  }
+}
+@media sccreen and (max-width: 680px) {
+  .button2sp_yoyaku {
+    font-size: 1.8rem;
+    position: absolute;
+    top: 1900px;
+    left: 115px;
+    text-align: center;
+    color: #fff;
+  }
+}
+/*menuはここから↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+.menu_relative {
+  position: relative;
+  margin-top: 0;
+}
+.menu_relative img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 680px) {
+  .menu_relative img {
+    width: 100%;
+  }
+}
+.title3 {
+  font-size: 8rem;
+  position: absolute;
+  top: 26px;
+  left: 98px;
+  color: #42210b;
+}
+@media screen and (max-width: 680px) {
+  .title3 {
+    font-size: 8rem;
+    position: absolute;
+    top: 26px;
+    left: 98px;
+    color: #42210b;
+  }
+}
+.catchf3-1 {
+  font-size: 4.3rem;
+  position: absolute;
+  top: 146px;
+  left: 98px;
+  color: #42210b;
+}
+.intro3 {
+  font-size: 2rem;
+  position: absolute;
+  top: 215px;
+  left: 150px;
+  color: #42210b;
+  line-height: 1.5;
+}
+.season1 {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 679px;
+  left: 240px;
+  text-align: center;
+  line-height: 1.5;
+}
+.season2 {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 363px;
+  left: 770px;
+  text-align: center;
+  line-height: 1.5;
+}
+.season3 {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 679px;
+  left: 765px;
+  text-align: center;
+  line-height: 1.5;
+}
+.catchf3-2 {
+  font-size: 4.3rem;
+  position: absolute;
+  top: 766px;
+  left: 98px;
+  color: #42210b;
+}
+.grand_food1 {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 988px;
+  left: 135px;
+  text-align: center;
+  line-height: 1.5;
+}
+.grand_food2 {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 988px;
+  left: 378px;
+  text-align: center;
+  line-height: 1.5;
+}
+.grand_food3 {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 1198px;
+  left: 114px;
+  text-align: center;
+  line-height: 1.5;
+}
+.grand_food4 {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 1198px;
+  left: 343px;
+  text-align: center;
+  line-height: 1.5;
+}
+.smoothie {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 988px;
+  left: 545px;
+  width: 420px;
+  display: grid;
+  grid-template-columns: 126px 126px 126px;
+  text-align: center;
+  line-height: 1.5;
+}
+.icedrink {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 1198px;
+  left: 545px;
+  width: 420px;
+  display: grid;
+  grid-template-columns: 126px 126px 126px;
+  text-align: center;
+  line-height: 1.5;
+}
+.hotdrink {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 1359px;
+  left: 545px;
+  width: 420px;
+  display: grid;
+  grid-template-columns: 126px 126px 126px;
+  text-align: center;
+  line-height: 1.5;
+}
+/*shopはここから↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+.shop_relative {
+  position: relative;
+  margin-top: 0;
+}
+.shop_relative img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.title4 {
+  font-size: 8rem;
+  position: absolute;
+  top: 26px;
+  left: 98px;
+  color: #42210b;
+}
+.intro4 {
+  font-size: 2rem;
+  position: absolute;
+  top: 136px;
+  left: 98px;
+  color: #42210b;
+  line-height: 2;
+}
+.shopname {
+  font-size: 4rem;
+  font-weight: bold;
+  position: absolute;
+  top: 210px;
+  left: 168px;
+}
+.description {
+  font-size: 1.7rem;
+  position: absolute;
+  top: 265px;
+  left: 80px;
+  line-height: 1.5;
+}
+.shop_map::before {
+  content: url(../images/icon_map.png);
+}
+.shop_holiday::before {
+  content: url(../images/icon_holiday.png);
+}
+.shop_tel::before {
+  content: url(../images/icon_tel2.png);
+}
+.shop_time::before {
+  content: url(../images/icon_time.png);
+}
+.shop_money::before {
+  content: url(../images/icon_money.png);
+}
+.shop_parking::before {
+  content: url(../images/icon_parking.png);
+}
+.seat {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #42210b;
+}
+.counter {
+  position: absolute;
+  top: 459px;
+  left: 507px;
+}
+.table {
+  position: absolute;
+  top: 800px;
+  left: 45px;
+}
+.terrace {
+  position: absolute;
+  top: 800px;
+  left: 505px;
+}
+.all {
+  position: absolute;
+  top: 1175px;
+  left: 106px;
+}
+.chair {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 840px;
+  left: 40px;
+  color: #42210b;
+}
+/*accessはここから↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓*/
+.access_relative {
+  position: relative;
+}
+.access_relative img {
+  width: 100%;
+}
+.title5 {
+  font-size: 8rem;
+  position: absolute;
+  top: 26px;
+  left: 98px;
+  color: #42210b;
+}
+.car {
+  font-size: 2.2rem;
+  position: absolute;
+  top: 170px;
+  left: 98px;
+  color: #42210b;
+}
+.car::before {
+  content: url(../images/icon_car.png);
+}
+.bus {
+  font-size: 2.2rem;
+  position: absolute;
+  top: 250px;
+  left: 98px;
+  color: #42210b;
+}
+.bus::before {
+  content: url(../images/icon_bus.png);
+}
+.parking {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 205px;
+  left: 148px;
+  color: #42210b;
+}
+.button3 a {
+  font-size: 2rem;
+  position: absolute;
+  top: 525px;
+  left: 75px;
+  color: #666;
+  display: block;
+  text-decoration: none;
+  /* display: flex;
+  align-items: center; */
+}
+.button3 :hover {
+  color: #aaa;
+}
+.nav2 {
+  display: flex; /*nav2を横並び*/
+  width: 650px;
+  position: absolute;
+  top: 430px;
+  left: 330px;
+  justify-content: space-between;
+  font-size: 1.6rem;
+}
+.nav2 li {
+  width: calc(100% / 6 - 2px);
+  display: block; /*ボタン全体*/
+  margin-top: 10px;
+  justify-content: space-between;
+  letter-spacing: 1px;
+}
+.nav2 li a {
+  color: #666;
+  cursor: pointer; /*ポインターはli{}内にかける*/
+  display: block;
+  text-decoration: none;
+  text-align: center;
+}
+.nav2 li a::after {
+  content: url(../images/sannkaku.png); /*aタグの後ろに三角*/
+}
+.nav2 li a:hover {
+  color: #aaa;
+}
+footer {
+  background-color: #42210b;
+  color: #aaa;
+  text-align: center;
+  padding: 10px 0;
+}
+.pc {
+  display: block;
+}
+@media screen and (max-width: 680px) {
+  .pc {
+    display: none;
+  }
+}
+.sp {
+  display: none;
+}
+@media screen and (max-width: 680px) {
+  .sp {
+    display: block;
+  }
+}
